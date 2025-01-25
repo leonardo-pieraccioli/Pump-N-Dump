@@ -31,7 +31,7 @@ public class ObstacleSpawner : MonoBehaviour
             
             if (position != Vector2.zero && rand < _obstacleProbability)
             {
-                Instantiate(_obstaclePrefab[Random.Range(0, _obstaclePrefab.Length - 1)], position + Vector2.left * 5f, Quaternion.identity);
+                Instantiate(_obstaclePrefab[Random.Range(0, _obstaclePrefab.Length)], position + Vector2.left * 5f, Quaternion.identity);
                 _spawnRate = Random.Range(_spawnRateMax, _spawnRateMin);
             }
             else if (position != Vector2.zero && rand < _obstacleProbability + _trustProbability)
@@ -52,7 +52,7 @@ public class ObstacleSpawner : MonoBehaviour
             playerDirection = _pointer._direction;
         else 
             return Vector2.zero; //playerDirection = Quaternion.Euler(0, 0, -_pointer._currentAngle) * Vector2.right;
-        Vector2 spawnPosition = playerPosition + playerDirection * _pointer._speed * 1.5f;
+        Vector2 spawnPosition = playerPosition + playerDirection * _pointer._speed * 3f;
         return spawnPosition;
     }
 }

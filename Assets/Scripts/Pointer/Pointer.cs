@@ -7,6 +7,7 @@ public class Pointer : MonoBehaviour
     [SerializeField] private lr_LineController line;
     [SerializeField] public float _speed = 2.0f;
     [SerializeField] public float _angle = -45.0f;
+    [SerializeField] private AudioClip _clickSound;
     public float _currentAngle = 0.0f;
     public Vector2 _direction;
     private SpriteRenderer sr;
@@ -27,10 +28,17 @@ public class Pointer : MonoBehaviour
         if(Input.GetKey(KeyCode.Space) && !_hasCollided)
         {
             _currentAngle *= -1;
+            
         }
 
-        if (previousAngle > 0 && _currentAngle < 0 || previousAngle < 0 && _currentAngle > 0)
+        if (previousAngle > 0 && _currentAngle < 0)
         {
+            line.AddPoint();
+            AudioManager.Instance.PlaySound(_clickSound, .7f);
+        }
+        if (previousAngle < 0 && _currentAngle > 0)
+        {
+            AudioManager.Instance.PlaySound(_clickSound, 1.0f);
             line.AddPoint();
         }
 

@@ -16,7 +16,7 @@ public class Obstacle : MonoBehaviour
     void Update()
     {
         transform.Translate(obstacleSpeed * (Vector2.left + Vector2.down).normalized * Time.deltaTime);
-        if(transform.position.x < _pointer.transform.position.x - 15)
+        if(transform.position.x < _pointer.transform.position.x - 45)
         {
             Destroy(gameObject);
         }
