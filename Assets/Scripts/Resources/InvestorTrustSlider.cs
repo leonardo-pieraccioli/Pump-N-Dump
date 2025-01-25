@@ -37,7 +37,7 @@ public class InvestorTrustSlider : MonoBehaviour
     public void UpdateValue(float gain){
         slider.value += gain;
         pointer._angle += 1;
-        pointer._speed += .001f;
+        pointer._speed += .1f;
         if (slider.value >= 100)
         {
             gsm.ActivateWin();

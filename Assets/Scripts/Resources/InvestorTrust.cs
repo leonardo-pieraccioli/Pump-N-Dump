@@ -14,8 +14,8 @@ public class InvestorTrust : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            InvestorTrustSlider.Instance.UpdateValue(10);
             AudioManager.Instance.PlaySound(_audioClip, 0.7f + InvestorTrustSlider.Instance.slider.value / 300);
+            InvestorTrustSlider.Instance.UpdateValue(10);
             Destroy(gameObject);
         }
     }
