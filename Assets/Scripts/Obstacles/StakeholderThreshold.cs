@@ -29,5 +29,10 @@ public class StakeholderThreshold : MonoBehaviour
             transform.position += new Vector3(0, 10, 0);
         }
         _increasingSpeed += 0.1f * Time.deltaTime;
+
+        if (InvestorTrustSlider.Instance.slider.value >= InvestorTrustSlider.Instance.slider.maxValue)
+        {
+            Destroy(gameObject);
+        }
     }
 }

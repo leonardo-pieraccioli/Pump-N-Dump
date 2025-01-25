@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -8,8 +7,9 @@ public class GameStateManager : MonoBehaviour
 {
     [SerializeField] public Canvas hud;
     [SerializeField] public Canvas gameover;
+    [SerializeField] public Canvas win;
     [SerializeField] public CinemachineVirtualCamera cineVC;
-    [SerializeField] public Pointer pointer;
+    [SerializeField] public Pointer pointer;    
     void Start()
     {
 
@@ -20,7 +20,7 @@ public class GameStateManager : MonoBehaviour
         hud.gameObject.SetActive(false);
         gameover.gameObject.SetActive(true);
         StartCoroutine(ZoomOrtho());
-        cineVC.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 8;
+        cineVC.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 6;
         cineVC.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_FrequencyGain = 8;
         pointer._hasCollided = true;
         pointer._speed = 3;
@@ -47,5 +47,18 @@ public class GameStateManager : MonoBehaviour
     public void Suicide()
     {
         Application.Quit();
+    }
+
+    public void ActivateWin()
+    {
+        hud.gameObject.SetActive(false);
+        win.gameObject.SetActive(true);
+        StartCoroutine(ZoomOrtho());
+        cineVC.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 6;
+        cineVC.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_FrequencyGain = 8;
+        ObstacleSpawner.canSpawn = false;
+        pointer._hasCollided = true;
+        pointer._speed = 3;
+        pointer._angle = +75;
     }
 }
