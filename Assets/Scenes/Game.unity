@@ -815,7 +815,6 @@ GameObject:
   - component: {fileID: 508712144}
   - component: {fileID: 508712146}
   - component: {fileID: 508712143}
-  - component: {fileID: 508712142}
   - component: {fileID: 508712145}
   - component: {fileID: 508712147}
   m_Layer: 0
@@ -825,14 +824,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &508712142
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 508712141}
-  m_Enabled: 1
 --- !u!20 &508712143
 Camera:
   m_ObjectHideFlags: 0
@@ -1790,8 +1781,8 @@ MonoBehaviour:
   _pointer: {fileID: 464760665}
   _obstaclePrefab:
   - {fileID: 6977118990176234176, guid: 6e988f535b141a540abc7957da46c762, type: 3}
-  - {fileID: 6977118990176234176, guid: 9dca3c2d25826a14684d43e9d98f0837, type: 3}
-  - {fileID: 6977118990176234176, guid: 0b4c17e6c831c4547a51f38cca6e84f5, type: 3}
+  - {fileID: 6977118990176234176, guid: 6e988f535b141a540abc7957da46c762, type: 3}
+  - {fileID: 6977118990176234176, guid: 6e988f535b141a540abc7957da46c762, type: 3}
   _obstacleProbability: 1
   _investorTrust: {fileID: 6148153102187705570, guid: 5f8b1c6d5d02b8b42a7aba9ad1043a04,
     type: 3}
@@ -1960,6 +1951,7 @@ GameObject:
   - component: {fileID: 1127420437}
   - component: {fileID: 1127420438}
   - component: {fileID: 1127420439}
+  - component: {fileID: 1127420440}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Player
@@ -2107,6 +2099,14 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!81 &1127420440
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1127420435}
+  m_Enabled: 1
 --- !u!1 &1129042915
 GameObject:
   m_ObjectHideFlags: 0
