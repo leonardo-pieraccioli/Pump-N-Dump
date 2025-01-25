@@ -29,7 +29,7 @@ public class Pointer : MonoBehaviour
             _currentAngle *= -1;
         }
 
-        if (previousAngle != _currentAngle)
+        if (previousAngle > 0 && _currentAngle < 0 || previousAngle < 0 && _currentAngle > 0)
         {
             line.AddPoint();
         }
@@ -41,6 +41,7 @@ public class Pointer : MonoBehaviour
 
     public void ObstacleCollision()
     {
+        if (_hasCollided) return;
         _hasCollided = true;
         StartCoroutine(ResetPointer());
     }
