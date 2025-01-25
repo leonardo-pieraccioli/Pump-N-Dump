@@ -13,7 +13,7 @@ public class InvestorTrust : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            InvestorTrustSlider.Instance.UpdateValue(20);
+            InvestorTrustSlider.Instance.UpdateValue(5);
             
             Destroy(gameObject);
         }
