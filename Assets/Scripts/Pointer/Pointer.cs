@@ -9,7 +9,7 @@ public class Pointer : MonoBehaviour
     [SerializeField] public float _angle = -45.0f;
     public float _currentAngle = 0.0f;
     public Vector2 _direction;
-    private SpriteRenderer sr;
+    public SpriteRenderer sr;
     public bool _hasCollided = false;
     void Start()
     {
