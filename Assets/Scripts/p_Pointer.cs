@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class p_PointMover : MonoBehaviour
+public class p_Pointer : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] private Vector3 _speed = new (1f, 0f, 0f);
-    SpriteRenderer sr;
+    private SpriteRenderer sr;
+    [SerializeField] private lr_LineController line;
+
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
@@ -16,8 +18,8 @@ public class p_PointMover : MonoBehaviour
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Space)){
-            _speed = Vector3.zero;
-            sr.enabled = true;
+            _speed += new Vector3(0f, 1f, 0f); //versione prova
+            line.AddPoint();
         }
         transform.position += Time.deltaTime * _speed;
     }
