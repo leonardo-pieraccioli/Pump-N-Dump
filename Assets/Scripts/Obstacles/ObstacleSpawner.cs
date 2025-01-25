@@ -1,12 +1,9 @@
-
-using System.Collections.Generic;
-using Unity.VisualScripting.Dependencies.Sqlite;
 using UnityEngine;
 public class ObstacleSpawner : MonoBehaviour
 {
     public static bool canSpawn = true;
     [SerializeField] private Pointer _pointer;
-    [SerializeField] private GameObject _obstaclePrefab;
+    [SerializeField] private GameObject[] _obstaclePrefab;
     [SerializeField] private float _obstacleProbability;
     [SerializeField] private GameObject _investorTrust;
     [SerializeField] private float _trustProbability;
@@ -34,7 +31,7 @@ public class ObstacleSpawner : MonoBehaviour
             
             if (position != Vector2.zero && rand < _obstacleProbability)
             {
-                Instantiate(_obstaclePrefab, position, Quaternion.identity);
+                Instantiate(_obstaclePrefab[Random.Range(0, _obstaclePrefab.Length - 1)], position + Vector2.left * 5f, Quaternion.identity);
                 _spawnRate = Random.Range(_spawnRateMax, _spawnRateMin);
             }
             else if (position != Vector2.zero && rand < _obstacleProbability + _trustProbability)

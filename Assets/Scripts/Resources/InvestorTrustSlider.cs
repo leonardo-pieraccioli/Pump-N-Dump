@@ -1,13 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.Burst.Intrinsics;
-using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class InvestorTrustSlider : MonoBehaviour
 {
     public static InvestorTrustSlider Instance { get; private set; }
+    [SerializeField] public GameStateManager gsm;
     private void Awake() 
     { 
         // If there is an instance, and it's not me, delete myself.
@@ -33,7 +30,7 @@ public class InvestorTrustSlider : MonoBehaviour
 
     void Update()
     {
-        slider.value -= 5f * Time.deltaTime;
+        slider.value -= 4.2f * Time.deltaTime;
         pointer._angle = initialAngle - slider.value * .15f;
     }
 
@@ -41,5 +38,9 @@ public class InvestorTrustSlider : MonoBehaviour
         slider.value += gain;
         pointer._angle += 1;
         pointer._speed += .001f;
+        if (slider.value >= 100)
+        {
+            gsm.ActivateWin();
+        }
     }
 }

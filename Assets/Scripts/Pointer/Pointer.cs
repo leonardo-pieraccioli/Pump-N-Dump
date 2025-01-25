@@ -34,8 +34,8 @@ public class Pointer : MonoBehaviour
             line.AddPoint();
         }
 
-        _direction = Quaternion.Euler(0, 0, _currentAngle) * Vector2.right;
         sr.transform.rotation = Quaternion.Euler(0, 0, -90 + _currentAngle);
+        _direction = Quaternion.Euler(0, 0, _currentAngle) * Vector2.right;
         transform.Translate(_speed * _direction.normalized * Time.deltaTime);
     }
 
