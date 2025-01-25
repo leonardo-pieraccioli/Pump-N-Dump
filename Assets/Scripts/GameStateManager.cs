@@ -9,7 +9,9 @@ public class GameStateManager : MonoBehaviour
     [SerializeField] public Canvas gameover;
     [SerializeField] public Canvas win;
     [SerializeField] public CinemachineVirtualCamera cineVC;
-    [SerializeField] public Pointer pointer;    
+    [SerializeField] public Pointer pointer;
+    [SerializeField] private AudioClip stonks;
+    [SerializeField] private AudioClip notStonks;
     void Start()
     {
 
@@ -17,6 +19,7 @@ public class GameStateManager : MonoBehaviour
 
     public void ActivateGameOver()
     {
+        AudioManager.Instance.PlaySound(notStonks);
         hud.gameObject.SetActive(false);
         gameover.gameObject.SetActive(true);
         StartCoroutine(ZoomOrtho());
@@ -51,6 +54,7 @@ public class GameStateManager : MonoBehaviour
 
     public void ActivateWin()
     {
+        AudioManager.Instance.PlaySound(stonks);
         hud.gameObject.SetActive(false);
         win.gameObject.SetActive(true);
         StartCoroutine(ZoomOrtho());
