@@ -26,18 +26,13 @@ public class lr_LineController : MonoBehaviour
     }
 
     private void Update(){
-        for (int i = 0; i < points.Length; i++)
-        {
-            lr.SetPosition(i, points[i].position);
-        }
+        lr.SetPosition(lr.positionCount - 1, _pointer.transform.position);
     }
 
     public void AddPoint(){
         _new_point = Instantiate(_point_prefab, _pointer.transform.position, Quaternion.identity).transform;
-        //rimuovi elemento in coda
-        points = points.Take(points.Length - 1).ToArray();
-        points = points.Append(_new_point).ToArray();
-        points = points.Append(_pointer.transform).ToArray();
-        lr.positionCount = points.Length;
+        lr.positionCount++;
+        lr.SetPosition(lr.positionCount - 2, _new_point.position);
+        lr.SetPosition(lr.positionCount - 1, _pointer.transform.position);
     }
 }
