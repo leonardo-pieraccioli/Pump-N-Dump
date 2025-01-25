@@ -10,7 +10,7 @@ public class Pointer : MonoBehaviour
     [SerializeField] private AudioClip _clickSound;
     public float _currentAngle = 0.0f;
     public Vector2 _direction;
-    private SpriteRenderer sr;
+    public SpriteRenderer sr;
     public bool _hasCollided = false;
     void Start()
     {
