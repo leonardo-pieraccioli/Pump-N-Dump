@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class Pointer : MonoBehaviour
 {
-    [SerializeField] private float _speed = 2.0f;
-    [SerializeField] private float _angle = 45.0f;
-    private Vector2 _direction;
+    [SerializeField] public float _speed = 2.0f;
+    [SerializeField] public float _angle = 45.0f;
+    public Vector2 _direction;
     void Start()
     {
         _direction = Quaternion.Euler(0, 0, _angle) * Vector2.right;
