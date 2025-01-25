@@ -4,16 +4,20 @@ using UnityEngine;
 
 public class Obstacle : MonoBehaviour
 {
-    [SerializeField] static private float obstacleSpeed = 2.0f;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] static public float obstacleSpeed = 2.0f;
 
     // Update is called once per frame
     void Update()
     {
         transform.Translate(obstacleSpeed * (Vector2.left + Vector2.down).normalized * Time.deltaTime);
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            collision.gameObject.GetComponentInParent<Pointer>().ObstacleCollision();
+            Destroy(gameObject);
+        }
     }
 }
