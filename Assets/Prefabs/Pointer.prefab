@@ -95,8 +95,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 8663474743793032452}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 614d08b84bf6cef4aa2102c49bcb0221, type: 3}
+  m_Script: {fileID: 11500000, guid: 6a6f6a639a25efb45b86435ffcc08b51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: {x: 1, y: 0, z: 0}
   line: {fileID: 0}
+  _speed: 2
+  _angle: 45
+  _currentAngle: 0
+  _direction: {x: 0, y: 0}
