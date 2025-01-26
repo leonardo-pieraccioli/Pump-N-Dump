@@ -54,6 +54,7 @@ public class GameStateManager : MonoBehaviour
 
     public void Bailout()
     {
+        ObstacleSpawner.canSpawn = true;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     // Update is called once per frame

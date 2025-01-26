@@ -14,7 +14,7 @@ public class StakeholderThreshold : MonoBehaviour
                     _pointer.transform.position.x, 
                     transform.position.y 
                         + (System.Math.Abs(_pointer._direction.y) / 4f // base speed base on pointer upward speed
-                        + (_pointer.transform.position.y - transform.position.y) / 5f // additional speed based on distance between pointer and stakeholder
+                        + (_pointer.transform.position.y - transform.position.y) / 6f // additional speed based on distance between pointer and stakeholder
                         + _increasingSpeed ) // increasing speed in time
                         * Time.deltaTime,                 
                     transform.position.z
@@ -28,7 +28,7 @@ public class StakeholderThreshold : MonoBehaviour
         {
             transform.position += new Vector3(0, 15, 0);
         }
-        _increasingSpeed += 0.1f * Time.deltaTime;
+        _increasingSpeed += 0.05f * Time.deltaTime;
 
         if (InvestorTrustSlider.Instance.slider.value >= InvestorTrustSlider.Instance.slider.maxValue)
         {

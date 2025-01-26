@@ -53,7 +53,7 @@ public class ObstacleSpawner : MonoBehaviour
         Vector2 playerPosition = _pointer.transform.position;
         Vector2 playerDirection;
         if(_pointer._currentAngle > 0)
-            playerDirection = Quaternion.Euler(0, 0, -5) * _pointer._direction;
+            playerDirection = Quaternion.Euler(0, 0, -3.5f) * _pointer._direction;
         else 
             return Vector2.zero; //playerDirection = Quaternion.Euler(0, 0, -_pointer._currentAngle) * Vector2.right;
         Vector2 spawnPosition = playerPosition + playerDirection * _pointer._speed * 3f;
