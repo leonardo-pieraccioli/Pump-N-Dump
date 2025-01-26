@@ -12,7 +12,7 @@ public class bkg_followCamera : MonoBehaviour
 
     void Update()
     {
-        Vector3 pos = new Vector3(Mathf.Round(t_camera.position.x/snap)*snap,Mathf.Round(t_camera.position.y/snap)*snap, 0f);
+        Vector3 pos = new Vector3(Mathf.Round(t_camera.position.x/snap)*snap,Mathf.Round(t_camera.position.y/snap)*snap, 0.2f);
         transform.position = pos;
     }
 }

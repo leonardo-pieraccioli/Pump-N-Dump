@@ -30,7 +30,7 @@ public class InvestorTrustSlider : MonoBehaviour
 
     void Update()
     {
-        slider.value -= 4.2f * Time.deltaTime;
+        slider.value -= 3.5f * Time.deltaTime;
         pointer._angle = initialAngle - slider.value * .15f;
     }
 

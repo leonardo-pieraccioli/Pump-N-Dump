@@ -13,10 +13,10 @@ public class StakeholderThreshold : MonoBehaviour
         transform.position = new Vector3(
                     _pointer.transform.position.x, 
                     transform.position.y 
-                        + (System.Math.Abs(_pointer._direction.y) / 3f // base speed base on pointer upward speed
-                        + (_pointer.transform.position.y - transform.position.y) / 4f // additional speed based on distance between pointer and stakeholder
+                        + (System.Math.Abs(_pointer._direction.y) / 4f // base speed base on pointer upward speed
+                        + (_pointer.transform.position.y - transform.position.y) / 5f // additional speed based on distance between pointer and stakeholder
                         + _increasingSpeed ) // increasing speed in time
-                        * Time.deltaTime,
+                        * Time.deltaTime,                 
                     transform.position.z
                 ); 
         if (_pointer.transform.position.y - _pointer.transform.localScale.x/2 <= transform.position.y )
@@ -24,9 +24,9 @@ public class StakeholderThreshold : MonoBehaviour
             gsm.ActivateGameOver();
             Destroy(gameObject);
         }
-        else if (_pointer.transform.position.y >= transform.position.y + 20)
+        else if (_pointer.transform.position.y >= transform.position.y + 50)
         {
-            transform.position += new Vector3(0, 10, 0);
+            transform.position += new Vector3(0, 15, 0);
         }
         _increasingSpeed += 0.1f * Time.deltaTime;
 

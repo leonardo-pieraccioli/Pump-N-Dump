@@ -54,8 +54,7 @@ public class GameStateManager : MonoBehaviour
 
     public void Bailout()
     {
-        Scene scene = SceneManager.GetActiveScene(); 
-        SceneManager.LoadScene(scene.name);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     // Update is called once per frame
     public void Suicide()

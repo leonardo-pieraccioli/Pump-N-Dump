@@ -56,7 +56,7 @@ public class Pointer : MonoBehaviour
 
     IEnumerator ResetPointer()
     {
-        float malusTimer = Random.Range(.5f, 1.2f);
+        float malusTimer = Random.Range(.3f, .6f);
         yield return new WaitForSeconds(malusTimer);
         _hasCollided = false;
     }
