@@ -12,7 +12,7 @@ public class ObstacleSpawner : MonoBehaviour
     [SerializeField] private float _spawnRateMax = 3.0f;
     [SerializeField] private float _spawnRateMin = 1.0f;
     private float _timer = 0.0f;
-    private int _coinMax = 8;
+    private int _coinMax = 6;
     private int _coinCount = 0;
     // Start is called before the first frame update
     void Start()
