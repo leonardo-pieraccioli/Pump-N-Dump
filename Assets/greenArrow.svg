@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1017.339"
+   height="667.2027"
+   viewBox="0 0 1017.339 667.2027"
+   version="1.1"
+   id="svg1"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:export-bgcolor="#292d3e00" />
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient2"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#6ec66f;stop-opacity:0.49803922;"
+         offset="0.0281955"
+         id="stop2" />
+      <stop
+         style="stop-color:#6ec66f;stop-opacity:1;"
+         offset="0.30827069"
+         id="stop4" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2"
+       id="linearGradient3"
+       x1="197.63853"
+       y1="464.63553"
+       x2="1023.5553"
+       y2="464.63553"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     inkscape:label="Livello 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-197.63853,-159.26695)">
+    <path
+       id="path2"
+       style="fill:none;fill-rule:evenodd;stroke:url(#linearGradient3);stroke-width:12;stroke-linecap:square;stroke-miterlimit:10;stroke-dasharray:none;paint-order:fill markers stroke"
+       d="M 882.90786,519.35757 1206.4996,167.74493 M 206.12003,817.98817 443.07692,566.42434 559.93238,725.4776 837.46407,288.89265 879.70266,513.7671"
+       sodipodi:nodetypes="ccccccc"
+       inkscape:export-filename="greenArrow.svg"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:#6ec66f;fill-opacity:1;fill-rule:evenodd;stroke:#6ec66f;stroke-width:4.14302;stroke-linecap:square;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       d="m 1230.4308,142.10471 -44.4362,17.89733 29.0723,27.97264 z"
+       id="path4" />
+  </g>
+</svg>
